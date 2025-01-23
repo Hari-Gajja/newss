@@ -74,9 +74,9 @@ function redirectToSharePage() {
             font-size: 25px;
         }
         img {
-            width: 150px;
-            height: 150px;
-            border-radius: 15px;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
             display: block;
             margin: 10px auto;
         }
