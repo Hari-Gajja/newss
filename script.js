@@ -54,6 +54,7 @@ function redirectToSharePage() {
      <style>
         body {
             font-family: Arial, sans-serif;
+            font-size:25px;
         }
         .receipt {
             width: 100%;
@@ -70,7 +71,7 @@ function redirectToSharePage() {
         }
         p {
             margin: 5px 0;
-            font-size: 14px;
+            font-size: 25px;
         }
         img {
             width: 50px;
@@ -99,7 +100,7 @@ function redirectToSharePage() {
                 padding: 10px;
             }
             p {
-                font-size: 12px;
+                font-size: 25px;
             }
             button {
                 padding: 8px;
@@ -150,7 +151,7 @@ function printAndSharePage() {
     const { jsPDF } = window.jspdf;
     const receipt = document.getElementById('receipt');
 
-    const doc = new jsPDF('p', 'mm', 'a2');
+    const doc = new jsPDF('p', 'mm', 'a4');
     doc.html(receipt, {
         callback: function (doc) {
             const pdfBlob = doc.output('blob');
