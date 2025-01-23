@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cash Receipt</title>
+    <link rel="shortcut icon" class="favicon"
+        href="logo.jpg"
+        type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="receipt" id="receipt">
+        <img src="logo.jpg" alt="Logo Here">
+        <h2>SR CHITS</h2>
+        <h2>CASH RECEIPT</h2>
+        <div>
+            <label for="date">Date</label>
+            <input type="date" id="date">
+        </div>
+        <div>
+            <label for="time">Time</label>
+            <input type="time" id="time">
+        </div>
+        <div>
+            <label for="months">Number of Payment months</label>
+            <input type="number" id="months" placeholder="Enter payment month">
+        </div>
+        <div>
+            <label for="from">From</label>
+            <input type="text" id="from" placeholder="Enter the sender name">
+        </div>
+        <div>
+            <label for="currency">Currency</label>
+            <input type="text" id="currency" value="INR">
+        </div>
+        <div>
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Enter Amount">
+        </div>
+        <div>
+            <label for="for">Group</label>
+            <input type="text" id="for" placeholder="Enter the plan">
+        </div>
+        <div>
+            <label for="to">To</label>
+            <input type="text" id="to" placeholder="Enter customer name">
+        </div>
+        <div>
+            <label for="issuedBy">Issued By</label>
+            <input type="text" id="issuedBy" value="SR CHITS" readonly>
+        </div>
+        <div>
+            <label for="methodOfPayment">Method of Payment</label>
+            <input type="text" id="methodOfPayment" placeholder="Enter the method of payment">
+        </div>
+        <div>
+            <label for="details">Details</label>
+            <textarea id="details" rows="4" readonly></textarea>
+        </div>
+        <button class="button" onclick="redirectToSharePage()">Share as PDF</button>
+        <button class="button" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+        <footer class="footer">
+            <p>Developed by Hari Gajja</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

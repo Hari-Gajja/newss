@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    width: 90%;
+    height: 100vh;
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e9f4;
+}
+
+.receipt{
+    width: 90%;
+}
+
+.login-form {
+    width: 350px;
+    height: auto;
+}
+
+.form-title {
+    text-align: center;
+    padding: 25px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+input {
+    margin-right: 8px;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: all 0.25s ease-in-out;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+}
+
+button,
+input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #e5e9f4;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+input:focus {
+    box-shadow: inset -2px -2px 20px #babecc, inset 2px 2px 20px #fff;
+}
+
+button {
+    color: #61677c;
+    font-weight: bold;
+    font-weight: 600;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: inset -5px -5px 20px #fff, inset 2px 2px 5px #babecc;
+    transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+    box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #babecc;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 1px #babecc, inset -2px 1px 2px #fff;
+}
+
+.receipt h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.receipt div {
+    margin-bottom: 10px;
+}
+
+.receipt label {
+    display: block;
+    font-weight: bold;
+}
+
+
+.receipt textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #babecc;
+    
+}
+
+.favicon{
+    border-radius: 5px;
+}
+
+img{
+    border-radius:20px ;
+    margin-top: 450px;
+    width: 90%;
+    box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #babecc;
+}
+
+.footer {
+    position:relative;
+    bottom: 0;
+    width: 90%;
+    background: #e5e9f4;
+    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.7), 6px 6px 16px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    /* Ensure footer is on top */
+}
+
+.receipt .footer p {
+    margin: 0;
+    color: #333;
+    font-size: 1em;
+}
+
