@@ -53,7 +53,7 @@ function redirectToSharePage() {
     const sharePageContent = `
     <style>
     div{
-    font-size:5px;
+    font-size:25px;
     margin-top:40px;
     }
     img{
