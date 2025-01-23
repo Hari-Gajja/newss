@@ -51,10 +51,15 @@ function redirectToSharePage() {
     const formattedDate = formatDate(date);
 
     const sharePageContent = `
-    <style>]
+    <style>
     div{
     font-size:5px;
     margin-top:40px;
+    }
+    img{
+    width:50px;
+    height:50px;
+    border-radius:5px;
     }
     </style>
         <div class="receipt" id="receipt">
@@ -70,6 +75,7 @@ function redirectToSharePage() {
             <p>&nbsp;&nbsp;To: ${to}</p>
             <p>&nbsp;&nbsp;Received with thanks from <b>${from}</b><br>&nbsp;&nbsp; amount of<b> INR ${amount}.00 </b>for Payment of<br> &nbsp;&nbsp;<b>${forWhat}</b> completed ${months} months on ${formattedDate} at<br>&nbsp;&nbsp; ${time}.</p>
             <p>&nbsp;&nbsp;Method of Payment: ${methodOfPayment}</p>
+            <img src="logo.jpg" alt="Logo Here">
             <p>&nbsp;&nbsp;Received By: ${issuedBy}</p>
             <button onclick="printAndSharePage()">Share as PDF on WhatsApp</button>
         </div>
