@@ -107,7 +107,6 @@ function redirectToSharePage() {
             }
         }
     </style>
-</head>
 <body>
     <div class="receipt" id="receipt">
         <h2>SR CHITS</h2>
@@ -146,28 +145,37 @@ function redirectToSharePage() {
 }
 
 function printAndSharePage() {
+    // Print the receipt
     window.print();
 
     const { jsPDF } = window.jspdf;
     const receipt = document.getElementById('receipt');
 
+    // Generate PDF from the receipt content
     const doc = new jsPDF('p', 'mm', 'a4');
     doc.html(receipt, {
         callback: function (doc) {
             const pdfBlob = doc.output('blob');
             const to = document.querySelector('#receipt p:nth-child(9)').textContent.split(': ')[1];
 
+            // Check if the Web Share API is supported
             if (navigator.share) {
                 navigator.share({
-                    title: `${to}`,
+                    title: `${from}`,
                     text: 'Here is my cash receipt.',
-                    files: [new File([pdfBlob], `${to}.pdf`, { type: 'application/pdf' })]
-                }).then(() => console.log('Shared successfully'))
-                .catch(error => console.log('Sharing failed', error));
+                    files: [new File([pdfBlob], `${from}.pdf`, { type: 'application/pdf' })]
+                }).then(() => {
+                    console.log('Shared successfully');
+                }).catch(error => {
+                    console.error('Sharing failed', error);
+                    alert('Sharing failed. Please try again.');
+                });
             } else {
                 alert('Web Share API not supported in this browser.');
             }
-        }
+        },
+        x: 10,
+        y: 10
     });
 }
 
