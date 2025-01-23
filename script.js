@@ -104,7 +104,7 @@ function printAndSharePage() {
     const { jsPDF } = window.jspdf;
     const receipt = document.getElementById('receipt');
 
-    const doc = new jsPDF('p', 'mm', 'a4');
+    const doc = new jsPDF('p', 'mm', 'a2');
     doc.html(receipt, {
         callback: function (doc) {
             const pdfBlob = doc.output('blob');
