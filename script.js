@@ -123,7 +123,8 @@ function redirectToSharePage() {
         <p>Method of Payment: ${methodOfPayment}</p>
         <img src="logo.jpg" alt="Logo Here">
         <p>Received By: ${issuedBy}</p>
-        <button onclick="printAndSharePage()">Share 
+        <button onclick="printAndSharePage()">>Share as PDF on WhatsApp</button>
+    </div>
     `;
     const newWindow = window.open();
     newWindow.document.write(`
